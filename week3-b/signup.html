@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up</title>
+  <style>
+  body {
+      background-image: url("background.png");
+      font-family: arial;
+      margin: 0 auto;
+  }
+  header {
+    height: 100px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: #C0C0C0;
+    overflow: auto;
+  }
+  header a {
+    color: white;
+    text-decoration: none;
+    overflow: auto;
+  }
+  nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+nav img {
+  position:absolute;
+  top: 0;
+  right: 0;
+}
+nav li {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+}
+nav li:last-child {
+  border: 1px solid black;
+  margin-right: 25px;
+  border-radius: 4px;
+  background-color: blue;
+}
+main {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 50%;
+  padding: 10px 25px 35px 25px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+  img {
+    float: left;
+    width: 230px;
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  input {
+    display: block;
+    border: 2px solid grey;
+    border-radius: 3px;
+    }
+    input[type="text"] {
+    width: 200px;
+    height: 23px;
+    }
+    footer {
+    border-top: 2px solid #BBBBBB;
+    width: 55%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer p {
+    margin-top:40px;
+    text-align: center;
+    color: grey;
+    font-size: 12px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="http://cloud.avandamiri.com/image/423B1n2p2v0U/
+    acme-corp.jpg">
+    <nav>
+      <ul>
+        <li>
+          <a href="week2/acme.html">About Acme Corp</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+        <li>
+          <a href="#">Sign Up</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <h1>
+    Sign Up
+  </h1>
+  <form>
+    First Name<input type="text" placeholder="John">
+    <br>
+    Last Name<input type="text" placeholder="Doe">
+    <br>
+    Email<input type="text" placeholder="john.joe@example.com">
+    <br>
+    Password<input type="text" name="password">
+    <br>
+    <input type="checkbox" value="checked">Agree to our terms of
+      service<br><br>
+    <input type="submit" value="Sign Up">
+  </form>
+ </main>
+ <footer>
+   <p>
+     Copyright, 2015
+   </p>
+ </footer>
+</body>
+</html>
