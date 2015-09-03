@@ -10,15 +10,17 @@
 
 <script>
 // Your code goes here.
+
 function todolist() {
-
-
-var todo = document.querySelector("#new-todo-item-input").value
+var todo = document.querySelector("#new-todo-item-input")
 // var list
 var list = document.querySelector("#todo-list")
 // var list item
 var listItem = document.createElement("li")
+list.appendChild(listItem)
+listItem.textContent = list;
 }
+
 </script>
 
 <style>
