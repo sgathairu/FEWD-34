@@ -5,7 +5,9 @@
     <title>Blog</title>
 
     <style>
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
       body {
         margin: 0;
         background: #f1f0f5;
@@ -68,8 +70,9 @@
 
         <p>
           Programming can be tough...
-          lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
+          lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua.
         </p>
 
         <ul>
@@ -79,8 +82,8 @@
         </ul>
 
         <p>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+          Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </article>
 
@@ -90,21 +93,41 @@
       </div>
 
       <div id="comments">
-        <!--
+       <!--
         <div class="comment">
           You're looking good!
         </div>
-        -->
+      -->
       </div>
 
       <form id="new-comment">
-        <textarea id="new-comment-body" placeholder="Leave a comment..."></textarea>
+        <textarea id="new-comment-body" placeholder="Leave a comment...">
+        </textarea>
         <button type="submit">Comment</button>
       </form>
     </main>
 
     <script>
       // Your code goes here.
+      var likeButton = document.querySelector(".like-link");
+      var likeCount = document.querySelector(".like-count");
+
+      function countNumber(event) {
+        likeCount.textContent = parseInt(likeCount.textContent) + 1;
+      }
+      likeButton.addEventListener("click", countNumber);
+
+      var newComment = document.querySelector("textarea");
+      var commentButton = document.querySelector("button");
+      var listComment = document.querySelector("#comments");
+
+      function addListItem(event) {
+        event.preventDefault();
+        var commentText = document.createElement("div");
+        commentText.textContent = newComment.value;
+        listComment.appendChild(commentText);
+      }
+      commentButton.addEventListener("click", addListItem);
     </script>
   </body>
 </html>
