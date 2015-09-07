@@ -112,22 +112,22 @@
       var likeButton = document.querySelector(".like-link");
       var likeCount = document.querySelector(".like-count");
 
-      function countNumber(event) {
+      function countLikes(event) {
         likeCount.textContent = parseInt(likeCount.textContent) + 1;
       }
-      likeButton.addEventListener("click", countNumber);
+      likeButton.addEventListener("click", countLikes);
 
       var newComment = document.querySelector("textarea");
       var commentButton = document.querySelector("button");
       var listComment = document.querySelector("#comments");
 
-      function addListItem(event) {
+      function addComment(event) {
         event.preventDefault();
-        var commentText = document.createElement("div");
+        var commentText = document.createElement("textarea");
         commentText.textContent = newComment.value;
         listComment.appendChild(commentText);
       }
-      commentButton.addEventListener("click", addListItem);
+      commentButton.addEventListener("click", addComment);
     </script>
   </body>
 </html>
