@@ -121,7 +121,6 @@
       }
       likeButton.addEventListener("click", countLikes);
 
-
       function addComment(event) {
         event.preventDefault();
         var comment = document.createElement("div");
@@ -129,7 +128,7 @@
         comment.textContent = commentBody.value;
         comments.appendChild(comment);
         commentForm.reset();
-      }
+      };
       commentForm.addEventListener("submit", addComment);
     </script>
   </body>
