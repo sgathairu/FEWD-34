@@ -112,22 +112,25 @@
       var likeButton = document.querySelector(".like-link");
       var likeCount = document.querySelector(".like-count");
 
+      var commentForm = document.querySelector("#new-comment");
+      var commentBody = document.querySelector("#new-comment-body");
+      var comments = document.querySelector("#comments");
+
       function countLikes(event) {
         likeCount.textContent = parseInt(likeCount.textContent) + 1;
       }
       likeButton.addEventListener("click", countLikes);
 
-      var newComment = document.querySelector("textarea");
-      var commentButton = document.querySelector("button");
-      var listComment = document.querySelector("#comments");
 
       function addComment(event) {
         event.preventDefault();
-        var commentText = document.createElement("textarea");
-        commentText.textContent = newComment.value;
-        listComment.appendChild(commentText);
+        var comment = document.createElement("div");
+        comment.setAttribute("class", "comment");
+        comment.textContent = commentBody.value;
+        comments.appendChild(comment);
+        commentForm.reset();
       }
-      commentButton.addEventListener("click", addComment);
+      commentForm.addEventListener("submit", addComment);
     </script>
   </body>
 </html>
