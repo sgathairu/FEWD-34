@@ -46,6 +46,16 @@
         <img src="http://ia.media-imdb.com/images/M/MV5BMjMxMTQ3MzMwMV5BMl5BanBnXkFtZTgwNTYxNzYxMTE@._V1_SY317_CR0,0,214,317_AL_.jpg">
         <div class="movie-title">Cool Runnings</div>
         <div class="movie-release-date">1993</div>
+      </li>
+      <li class="movie">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTg5NzUwMDU5NF5BMl5BanBnXkFtZTcwMjk2MDA4Mg@@._V1_SY317_CR18,0,214,317_AL_.jpg">
+        <div class="movie-title">Terminator 2</div>
+        <div class="movie-release-date">1991</div>
+      </li>
+      <li class="movie">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX214_AL_.jpg">
+        <div class="movie-title">Interstellar</div>
+        <div class="movie-release-date">2014</div>
       </li-->
     </ul>
 
@@ -69,9 +79,41 @@
       }
     ];
 
-    // Your code goes here.
-    var movie = document.createElement("li");
+     // Your code goes here
+     function displayMovie(movie) {
 
-    </script>
+       //Get the list and append a new list item to it
+       var list = document.querySelector("#movies");
+       var item = document.createElement("li");
+       list.appendChild(item);
+       //Create the title element and append it to the list item
+       //Add the CSS styling....classList.add
+       var title = document.createElement("div");
+       title.textContent = movie.title;
+       item.appendChild(title);
+       title.classList.add("movie-title");
+
+       //Create release date el and append it to list item, add the CSS
+       var date = document.createElement("div");
+       date.textContent = movie.releaseDate;
+       item.appendChild(date);
+       date.classList.add("movie-release-date");
+
+       //Create image el, give it the attributes, append, add CSS
+       var image = document.createElement("img");
+       image. setAttribute("src", movie.image);
+       item.appendChild(image);
+       item.classList.add("movie");
+
+     }
+
+     //Loop thru each movie, display list when button is clicked
+     function clickButton(event) {
+       event.preventDefault();
+       movies.forEach(displayMovie);
+     }
+     document.querySelector("#list-movies").addEventListener("click", clickButton);
+
+   </script>
   </body>
 </html>
