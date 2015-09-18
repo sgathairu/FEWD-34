@@ -108,11 +108,11 @@
      }
 
      //Loop thru each movie, display list when button is clicked...event listen
-     function clickButton(event) {
+     function buttonClicked(event) {
        event.preventDefault();
        movies.forEach(displayMovie);
      }
-     document.querySelector("#list-movies").addEventListener("click", clickButton);
+     document.querySelector("#list-movies").addEventListener("click", buttonClicked);
 
    </script>
   </body>
