@@ -6,7 +6,8 @@
 <link rel="stylesheet" href="animate.css">
 <style>
 
-  .nums {
+  .nums,
+  .draw {
     border: solid 5px #c9c9c9;
     font-style: normal;
     font-size: 25px;
@@ -17,14 +18,8 @@
     padding: 5px;
   }
   .draw {
-    border: solid 5px #c9c9c9;
-    font-style: normal;
-    font-size: 25px;
-    width: 40px;
-    margin-top: 0;
-    text-align: center;
-    color: green;
-    padding: 5px;
+    width: 40px !important;
+    color: green !important;
   }
   p.animated {
     color: white;
@@ -88,28 +83,27 @@
   </form>
   <script>
 
-  var numOfDraws = 0;
+  var numOfDraws = 0;    //Initialize draws counter
 
   function getNumbers() {
 
-    var temp = 0;
-    var newNumber = 0;
+    var temp = 0;   //Initialize a temporary hold for a number to be swapped
+    var newNumber = 0;   //Hold a randomized number
     var num = document.luckyNums.luckyNumsAll;
-    num.value = "";      //clear the text contents
-    var numbers = [39];
-    var fiveNumbers = [5];
+    num.value = "";      //clear the form contents
+    var numbers = [39];  //Initialize array
     var number;
 
-    //fill the array with numbers 1 to 39
+    //fill the array with numbers 1 to 39, where the index is also the array value
     for (number = 1; number < 40; number++) {
       numbers[number] = number
     }
 
-    //Randomize the numbers in array...
+    //Randomize the numbers in array
     for(number = 1; number <40; number++) {
-      newNumber = (Math.random()*39) + 1
-      newNumber = parseInt(newNumber, 10)
-      //Swapping numbers...
+      newNumber = (Math.random()*39) + 1    //float random number generated
+      newNumber = parseInt(newNumber, 10)   //parse the float as base 10 decimal
+      //Swap numbers here
       temp = numbers[number]
       numbers[number] = numbers[newNumber]
       numbers[newNumber] = temp
@@ -117,10 +111,9 @@
 
     //Take the top five random numbers and diplay them i
     for (number = 1; number < 6; number++) {
-
       num.value = num.value + numbers[number] + " "
     }
-    numOfDraws++
+    numOfDraws++   //increment draws counter
     document.luckyNums.draws.value = numOfDraws
   }
   </script>
