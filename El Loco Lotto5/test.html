@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--html>
+<head>
+<title>The Test</title>
+<style>
+  div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: inline-block;
+    text-align: center;
+  }
+
+</style>
+</head>
+<body>
+  <header>
+
+  </header>
+  <main>
+    <div id="win1">1</div>
+    <div id="win2">2</div>
+    <div id="win3">3</div>
+    <div id="win4">4</div>
+    <div id="win5">5</div>
+    <br><br>
+    <button  onclick="getNumbers()">Click</button>
+  </main>
+
+<script>
+
+  function getNumbers() {
+    var numbersAll = [39];
+    var num1 = document.querySelector("#win1");
+    var num2 = document.querySelector("#win2");
+    var num3 = document.querySelector("#win3");
+    var num4 = document.querySelector("#win4");
+    var num5 = document.querySelector("#win5");
+
+  }
+  /*var value1 = document.querySelector(".first-operand");
+  var value2 = document.querySelector(".second-operand");
+  var b = document.querySelector(".add-button");
+  b.addEventListener("click", add);
+
+  function add() {
+  var num1 = parseInt(value1.value);
+  var num2 = parseInt(value2.value);
+  var sum = num1 + num2;
+  document.querySelector(".result").value = sum;
+  }*/
+
+
+</script>
+</body>
+</html-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Testing</title>
+<link rel="stylesheet" href="animate.css">
+<style>
+
+  input[type=text] {
+    border: solid 5px #c9c9c9;
+    font-style: italic;
+    font-size: 40px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    color: red;
+    padding: 10px;
+
+
+  }
+
+
+  h1 {
+    margin: 0 auto;
+    font-size: 40px;
+    color: black;
+  }
+
+  h2 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 30px;
+    color: gold;
+
+  }
+  .ever {
+    margin: 0 auto;
+    color: black;
+    font-family: cursive;
+    font-size: 20px;
+  }
+
+  body {
+    max-width: 1000px;
+    margin: 0, auto;
+    text-align: center;
+    background-color: blue;
+  }
+  input[type=button] {
+		border: 1px solid transparent;
+    width: 180px;
+    height: 180px;
+		border-radius: 100%;
+		background-image: url("pentagram.png");
+    background-position: center;
+
+		cursor: pointer;
+  }
+</style>
+
+
+</head>
+
+<body>
+  <h1>The Top Five</h1>
+  <p class="ever">best numbers ever!</p><br>
+
+
+
+
+  <form name = "luckyNums">
+
+    <input type="text" name="luckyNumsAll" value="" placeholder="best 5 numbers">
+		<br>
+    <h2 class="animated infinite bounce">click here<br>↓</h2>
+    <input class="animated infinite rotateOut" type="button" onclick="getNumbers()">
+
+  </form>
+
+  <script>
+
+  function getNumbers() {
+
+    var temp = 0;
+    var newNumber = 0;
+    var num = document.luckyNums.luckyNumsAll;
+    num.value = "";
+    var numbers = [39];
+    var topNumbers = [5];
+
+    //fill the array with 1 to 39
+    for (number = 1; number < 40; number++) {
+      numbers[number] = number
+
+    }
+
+    //Randomize the numbers here
+    for(number = 1; number <40; number++) {
+      newNumber = parseInt(((Math.random()*39) + 1), 10)
+      temp = numbers[number]
+      numbers[number] = numbers[newNumber]
+      numbers[newNumber] = temp
+
+    }
+
+    //Take the top five random numbers and diplay them in text area
+    for (number = 1; number < 6; number++) {
+
+      num.value = num.value + numbers[number] + " "
+    }
+
+  }
+
+  </script>
+</body>
+</html>
