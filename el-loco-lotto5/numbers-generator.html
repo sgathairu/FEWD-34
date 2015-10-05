@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lotto Numbers</title>
+<link rel="stylesheet" href="animate.css">
+<style>
+
+  .nums,
+  .draw {
+    border: solid 5px #c9c9c9;
+    font-style: normal;
+    font-size: 25px;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    color: red;
+    padding: 5px;
+  }
+  .draw {
+    width: 40px !important;
+    color: green !important;
+  }
+  p.animated {
+    color: white;
+    font-size: 25px;
+    font-family: cursive;
+    margin-top: 0;
+    margin-bottom: 0;
+
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-family: cursive;
+    color: black;
+  }
+
+  h1 {
+    margin: 0 auto;
+    font-size: 50px;
+    font-family: sans-serif;
+    color: black;
+  }
+
+  h2 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 20px;
+    color: gold;
+  }
+
+
+  body {
+    max-width: 1000px;
+    margin: 0, auto;
+    text-align: center;
+    background-color:  #259FF8;
+  }
+
+  input[type=button] {
+		border: 1px solid transparent;
+    width: 100px;
+    height: 100px;
+		border-radius: 100%;
+		background-image: url("pentagram.png");
+    background-position: center;
+    cursor: pointer;
+  }
+
+</style>
+</head>
+<body>
+  <h1>El Loco Lotto5</h1>
+  <form name = "luckyNums">
+    <p class="animated infinite flash">five numbers b/w 1 and 39<br>↓</p>
+    <input class="nums" type="text" name="luckyNumsAll">
+    <p>number of draws<br>↓</p>
+    <input class="draw" type="text" name="draws">
+		<br>
+    <h2 class="animated infinite bounce">click to draw numbers<br>↓</h2>
+    <input class="animated infinite rotateIn" type="button" onclick="getNumbers()">
+  </form>
+  <script>
+
+  var numOfDraws = 0;    //Initialize draws counter
+
+  function getNumbers() {
+
+    var temp = 0;   //Initialize a temporary hold for a number to be swapped
+    var newNumber = 0;   //Hold a randomized number
+    var num = document.luckyNums.luckyNumsAll;
+    num.value = "";      //clear the form contents
+    var numbers = [39];  //Initialize array
+    var number;
+
+    //fill the array with numbers 1 to 39, where the index is also the array value
+    for (number = 1; number < 40; number++) {
+      numbers[number] = number
+    }
+
+    //Randomize the numbers in array
+    for(number = 1; number <40; number++) {
+      newNumber = (Math.random()*39) + 1    //float random number generated
+      newNumber = parseInt(newNumber, 10)   //parse the float as base 10 decimal
+      //Swap numbers here
+      temp = numbers[number]
+      numbers[number] = numbers[newNumber]
+      numbers[newNumber] = temp
+    }
+
+    //Take the top five random numbers and diplay them i
+    for (number = 1; number < 6; number++) {
+      num.value = num.value + numbers[number] + " "
+    }
+    numOfDraws++   //increment draws counter
+    document.luckyNums.draws.value = numOfDraws
+  }
+  </script>
+</body>
+</html>
