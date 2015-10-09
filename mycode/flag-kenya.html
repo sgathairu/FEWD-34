@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flag Kenya</title>
+<link rel="stylesheet" href="animate.css">
+<style>
+  /* The Animation Code*/
+  @keyframes bkground {
+    0%   {
+      background-color: black;
+    }
+    45%  {
+      background-color: red;
+    }
+    75% {
+      background-color: green;
+    }
+  }
+  body {
+    background-color: black;
+    animation-name: bkground;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /*animation-direction: alternate-reverse;*/
+  }
+  header {
+    height: 80px;
+    width: auto;
+    text-align: center;
+  }
+  h1 {
+    color: white;
+    font-size: 40px;
+    font-family: cursive;
+  }
+  .image {
+    position: absolute;
+    opacity: 0.8;
+    margin-top: -150px;
+    margin-left: 140px;
+  }
+  img {
+    width: 220px;
+    height: 200px;
+  }
+  .flag {
+    width: 500px;
+    display: block;
+    margin: auto;
+    border: 1px solid transparent;
+    padding: 4px;
+    background-color: white;
+  }
+  .black {
+    background-color: black;
+    height: 100px;
+  }
+  .white {
+    background-color: white;
+    height: 10px;
+  }
+  .red {
+    background-color: red;
+    height: 100px;
+  }
+  .green {
+    background-color: green;
+    height: 100px;
+  }
+  p {
+    width: auto;
+    text-align: center;
+    color: gold;
+    font-size: 18px;
+    font-family: cursive;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Hello Kenya!</h1>
+  </header>
+  <main>
+    <div class="flag">
+      <div class="black"></div>
+      <div class="white"></div>
+      <div class="red"></div>
+        <div class="image">
+          <img src="mzee.jpg">
+        </div>
+      <div class="white"></div>
+      <div class="green"></div>
+    </div>
+    <p class="animated infinite flash">(Site Under Construction)</p>
+  </main>
+</body>
+</html>
