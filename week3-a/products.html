@@ -1,115 +1,113 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Acme Products</title>
-    <style>
-      body {
-          background-image: url("background.png");
-          background-repeat: repeat;
-          font-family: arial;
-          margin: 0 auto;
-        }
-      main {
-        background-color: white;
-        border: 1px solid grey;
-        border-radius: 10px;
-        width: 60%;
-        padding: 10px 25px 10px 25px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
-      }
-      div {
-        display: inline-block;
-        margin-left: 350px;
-        margin-top: -370px;
-      }
-      div li {
-        display: inline-block;
-        border: 1px solid blue;
-        border-radius: 5px;
-        padding: 8px;
-
-      }
-      a {
-        text-decoration: none;
-
-      }
-      footer {
-        border-top: 2px solid #BBBBBB;
-        width: 65%;
-        margin-top: 40px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      footer p {
-        margin-top: 40px;
-        text-align: center;
-        color: grey;
-        font-size: 11px;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-    <h1>Products</h1>
-    <p>
-      For a complete list of products, please visit the <em>The
-      Original Illustrated Catalogue</em> of ACME Products.
-    </p>
-    <img src="antinight.jpg">
-    <div>
-      <p>
-        Funded by the Pentagon, the ACME Anti Nightmare Machine was very
-        effective in convincing young men to enlist in the armed forces
-        during the 1950's and 1960's
-      </p>
-      <ul>
-        <li>
-          <a href="#">Details</a>
-        </li>
-        <li>
-          <a href="#">Add to Cart</a>
-        </li>
-      </ul>
-    </div>
-    <img src="acmeinstant.jpg">
-    <div>
-      <p>
-        Never sleep in late again with the ACME Instant Awakener
-      </p>
-      <ul>
-        <li>
-          <a href="#">Details</a>
-        </li>
-        <li>
-          <a href="#">Add to Cart</a>
-        </li>
-      </ul>
-    </div>
-    <img src="acmeschools.jpg">
-      <div>
-      <p>
-        Learn how to defend yourself and be a champ with the ACME School of Self
-        Defense, lessons are available on vinyl records
-      </p>
-      <ul>
-        <li>
-          <a href="#">Details</a>
-        </li>
-        <li>
-          <a href="#">Add to Cart</a>
-        </li>
-      </ul>
-    </div>
+<head>
+<meta charset="utf-8">
+<title>Acme Products</title>
+<style>
+  body {
+    background-image: url("background.png");
+    background-repeat: repeat;
+    font-family: arial;
+    margin: 0 auto;
+  }
+  main {
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 60%;
+    padding: 10px 25px 10px 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+  }
+  .whitebtn {
+    border: 2px solid blue;
+    border-radius: 5px;
+    color: blue;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+  }
+  .bluebtn {
+    border: 2px solid blue;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    background-color: blue;
+    cursor: pointer;
+  }
+  footer {
+    border-top: 2px solid #BBBBBB;
+    width: 65%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer p {
+    margin-top: 40px;
+    text-align: center;
+    color: grey;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+  <main>
+  <h1>Products</h1>
+  <p>
+    For a complete list of products, please visit the <em>The
+    Original Illustrated Catalogue</em> of ACME Products.
+  </p>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <img src="antinight.jpg" width="200px" height="200px">
+          </td>
+          <td>
+            <p>
+              Funded by the Pentagon, the ACME Anti Nightmare Machine was very
+              effective in convincing young men to enlist in the armed forces
+              during the 1950's and 1960's
+            </p>
+            <button class="whitebtn">Details</button>
+            <button class="bluebtn">Add to Cart</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="acmeinstant.jpg" width="200px" height="200px">
+          </td>
+          <td>
+            <p>
+              Never sleep in late again with the ACME Instant Awakener
+            </p>
+            <button class="whitebtn">Details</button>
+            <button class="bluebtn">Add to Cart</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="acmeschools.jpg" width="200px" height="200px">
+          </td>
+          <td>
+            <p>
+              Learn how to defend yourself and be a champ with the ACME School of Self
+              Defense, lessons are available on vinyl records
+            </p>
+            <button class="whitebtn">Details</button>
+            <button class="bluebtn">Add to Cart</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </main>
   <footer>
     <p>
       Copyright, 2015
     </p>
   </footer>
-  </body>
+</body>
 </html>
