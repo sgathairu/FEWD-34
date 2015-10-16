@@ -1,115 +1,154 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>SammyG</title>
-  <link rel="stylesheet" href="animate.css">
-  <style>
-    body {
-      background-color: green;
+<meta charset="utf-8">
+<title>SammyG</title>
+<!--link rel="stylesheet" href="animate.css"-->
+<style>
+  body {
+    background-color: #E6FFCC;
+  }
+  header {
+    height: 100px;
+    width: 100%;
+    margin-top: 20px;
 
-    }
-    header {
-      height: 100px;
-      width: 380px;
-      margin-left: 10px;
-      overflow:auto;
-      text-align: center;
-    }
-    div {
-      text-decoration: none;
-      width: auto;
-      height: auto;
-      overflow: auto;
-      margin-left:60px;
-      margin-right: 700px;
-      border: 1px solid transparent;
-    }
-    h1 {
-      font-style: italic;
-      font-size: 40px;
-      text-shadow: 2px 2px 3px #FFFF00;
-    }
-    h2 {
-      font-size: 20px;
-      font-family: cursive;
-      margin-left: 75px;
-      margin-top: -23px;
-    }
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 20px;
-    }
-    a:hover {
-      color: blue;
-    }
-    a.animated {
-      color: gold !important;
-    }
-    footer {
-      width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align:center;
-      margin-top: 60px;
-      font-family: cursive;
-    }
+    overflow:auto;
+  }
+  img {
+    float: left;
+    margin-top: 0;
+    width: 150px;
+    height: 100px;
+  }
+ .container {
+    display: inline-block;
+
+    margin-top: 0;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown .dropdown-menu {
+    position: absolute;
+    /*top: 100%;*/
+    left: 0;
+    display: none;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    margin-left: -30px;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown button {
+    background: gold;
+    color: black;
+    border: none;
+    margin: 0;
+    padding: 5px;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 30px;
+    overflow: auto;
+  }
+  /** List Item Styles **/
+  .dropdown a {
+    display: block;
+    padding: 0;
+    text-decoration: none;
+    background: #E6FFCC;
+    color: black;
+ }
+ /** List Item Hover Styles **/
+ .dropdown a:hover {
+    color: blue;
+  }
+  h1 {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 60px;
+    text-shadow: 3px 3px 4px gold;
+    overflow: auto;
+  }
+  a {
+    text-decoration: none;
+    font-size: 17px;
+  }
+  aside {
+    float: right;
+    margin-right: 40px;
+    margin-top: 40px;
+    border: 1px solid grey;
+    width: 400px;
+    height: auto;
+    overflow: auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+  }
+  footer {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    margin-top: 260px;
+    font-family: cursive;
+    font-size: 16px;
+  }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Sammy Gathairu</h1>
-  </header>
-  <h2>...some coding I've learned to do lately...</h2>
-  <div>
-    <ul>
-      <li>
-        <a href="week1/whales.html">Whales<a/>
-      </li>
-      <li>
-        <a href="week2/acme-corp.html">Acme Corp Website<a/>
-      </li>
-      <li>
-        <a href="week3-a/products.html">Products Page-Acme<a/>
-      </li>
-      <li>
-        <a href="week3-b/signup.html">Sign Up Page-Acme<a/>
-      </li>
-      <li>
-        <a href="week4/calculators.html">Calculators<a/>
-      </li>
-      <li>
-        <a href="week5/dom-manipulator.html">DOM Manipulation<a/>
-      </li>
-      <li>
-        <a href="week6/calc.html">Next Calculator</a>
-      </li>
-      <li>
-        <a href="week6/blog.html">Blog</a>
-      </li>
-      <li>
-        <a href="week6/todo-list.html">To do List</a>
-      </li>
-      <li>
-        <a href="week7/todo-list-csv.html">To do List-CSV</a>
-      </li>
-      <li>
-        <a href="week7/movies.html">Movies</a>
-      </li>
-      <li>
-        <a href="week8/movie-search.html">Search Movie</a>
-      </li>
-      <li>
-        <a class="animated infinite pulse" href="el-loco-lotto5/numbers-generator.html">El Loco Lotto5</a>
-      </li>
-      <li>
-        <a class="animated infinite rubberBand" href="mycode/flag-kenya.html">Hello Kenya</a>
-      </li>
+<header>
+  <img src="mzee.jpg">
+  <h1>Sammy Gathairu</h1>
+</header>
+<div class="container">
+  <div class="dropdown">
+    <button>My GA Coursework</button>
+    <ul class="dropdown-menu">
+      <li><a href="week1/whales.html">Whales<a/></li>
+      <li><a href="week2/acme-corp.html">Acme Corp Website<a/></li>
+      <li><a href="week3-a/products.html">Products Page-Acme<a/></li>
+      <li><a href="week3-b/signup.html">Sign Up Page-Acme<a/></li>
+      <li><a href="week4/calculators.html">Calculators<a/></li>
+      <li><a href="week5/dom-manipulator.html">DOM Manipulation<a/></li>
+      <li><a href="week6/calc.html">Next Calculator</a></li>
+      <li><a href="week6/blog.html">Blog</a></li>
+      <li><a href="week6/todo-list.html">To do List</a></li>
+      <li><a href="week7/todo-list-csv.html">To do List-CSV</a></li>
+      <li><a href="week7/movies.html">Movies</a></li>
+      <li><a href="week8/movie-search.html">Search Movie</a></li>
     </ul>
   </div>
-  <footer>
-    <p>Copyright 2015</p>
-  </footer>
+  <div class="dropdown">
+    <button>My GA Projects</button>
+    <ul class="dropdown-menu">
+      <li><a href="el-loco-lotto5/numbers-generator.html">El Loco Lotto5</a></li>
+      <li><a href="mycode/flag-kenya.html">Hello Kenya</a></li>
+   </ul>
+  </div>
+  <div class="dropdown">
+    <button>My Other Stuff</button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Pending...</a></li>
+    </ul>
+  </div>
+</div>
+<aside>
+  <p>Some <em>wordy</em> words will appear here soon...working on it! Meantime,
+    mouse over the golden dropdown boxes and click on those links. My favorite is the
+    'El Loco Lotto5' under the 'My GA Projects' box.
+  </p>
+</aside>
+<footer>
+  <p>&copy; Thamweri 2015</p>
+</footer>
 </body>
 </html>
